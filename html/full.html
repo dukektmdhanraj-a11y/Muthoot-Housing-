@@ -1,0 +1,169 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Legal Report Generator</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><style>
+body {
+    font-family: "Segoe UI", sans-serif;
+    background: #f4f6f8;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 900px;
+    margin: 40px auto;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #222;
+}
+
+.section {
+    margin-bottom: 25px;
+}
+
+.section h3 {
+    margin-bottom: 10px;
+    color: #444;
+    border-left: 4px solid #007bff;
+    padding-left: 10px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 12px;
+}
+
+input {
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    transition: 0.2s;
+}
+
+input:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(0,123,255,0.15);
+}
+
+button {
+    width: 100%;
+    padding: 14px;
+    background: #007bff;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+button:hover {
+    background: #0056b3;
+}
+</style></head><body><div class="container">
+<h1>Legal Report Generator</h1><form action="/generate/full" method="post"><div class="section">
+<h3>Basic Details</h3>
+<div class="grid">
+<input name="DATE" placeholder="Date">
+<input name="APPLICATION_NO" placeholder="Application No">
+<input name="BRANCH_AREA" placeholder="Branch Area">
+</div>
+</div><div class="section">
+<h3>Applicant Details</h3>
+<div class="grid">
+<input name="APPLICANT_BOLD_OWNER" placeholder="Applicant Owner">
+<input name="APPLICANT_BOLD" placeholder="Applicant">
+<input name="CO_APPLICANT_BOLD" placeholder="Co-Applicant">
+<input name="APPLICANT_FULL" placeholder="Applicant Full Name">
+</div>
+</div><div class="section">
+<h3>Property Details</h3>
+<div class="grid">
+<input name="DEED_NO" placeholder="Deed No">
+<input name="DEED_DATE" placeholder="Deed Date">
+<input name="DOOR_NO" placeholder="Door No">
+<input name="Assessment_No" placeholder="Assessment No">
+<input name="EXTENT_YARDS" placeholder="Extent (Sq. Yards)">
+<input name="SURVEY_NO" placeholder="Survey No">
+<input name="PLOT_NO" placeholder="Plot No">
+<input name="ADDRESS" placeholder="Address">
+<input name="VILLAGE" placeholder="Village">
+<input name="GRAM_PANCHAYAT" placeholder="Gram Panchayat">
+<input name="MANDAL" placeholder="Mandal">
+<input name="SRO" placeholder="SRO">
+<input name="RO" placeholder="RO">
+<input name="DISTRICT" placeholder="District">
+</div>
+</div><div class="section">
+<h3>Boundaries</h3>
+<div class="grid">
+<input name="EAST_BOUNDARY" placeholder="East">
+<input name="WEST_BOUNDARY" placeholder="West">
+<input name="NORTH_BOUNDARY" placeholder="North">
+<input name="SOUTH_BOUNDARY" placeholder="South">
+</div>
+</div><div class="section">
+<h3>Measurements</h3>
+<div class="grid">
+<input name="E_W" placeholder="East-West (Site)">
+<input name="N_S" placeholder="North-South (Site)">
+<input name="E_W_FEET" placeholder="East-West (Construction)">
+<input name="N_S_FEET" placeholder="North-South (Construction)">
+<input name="EXTENT_FEET" placeholder="Extent (Sq. Feet)">
+</div>
+</div><div class="section">
+<h3>Certificates</h3>
+<div class="grid">
+<input name="POSSESSION_DATE" placeholder="Possession Date">
+<input name="POSSESSION_NAME" placeholder="Possession Name">
+<input name="DEATH_CERTIFI_DATE" placeholder="Death Certificate Date">
+<input name="DEATH_PERSON" placeholder="Death Person">
+<input name="DEATH_ISSUED_BY" placeholder="Death Issued By">
+<input name="FMC_DATE" placeholder="FMC Date">
+<input name="FMC_ISSUED_BY" placeholder="FMC Issued By">
+</div>
+</div><div class="section">
+<h3>Deed & Ownership</h3>
+<div class="grid">
+<input name="DEED_TYPE" placeholder="Deed Type">
+<input name="EXECUTANT_FULL" placeholder="Executant">
+<input name="RELATION" placeholder="Relation">
+<input name="WORTH" placeholder="Worth">
+</div>
+</div><div class="section">
+<h3>Tax Details</h3>
+<div class="grid">
+<input name="H_T_DATE" placeholder="House Tax Date">
+<input name="HOUSE_TAX_RECIPT_NO" placeholder="Receipt No">
+<input name="FINANCIAL_YEARS" placeholder="Financial Years">
+<input name="HOUSE_TAX_NAME" placeholder="Tax Name">
+<input name="HOUSE_TAX_ISSUED_BY" placeholder="Tax Issued By">
+</div>
+</div><div class="section">
+<h3>Encumbrance</h3>
+<div class="grid">
+<input name="EC_DATE" placeholder="EC Date">
+<input name="EC_NO" placeholder="EC No">
+</div>
+</div><div class="section">
+<h3>Misc</h3>
+<div class="grid">
+<input name="ENJOYMENT_FROM" placeholder="Enjoyment From">
+<input name="DEATH_DATE" placeholder="Death Date">
+</div>
+</div><button type="submit">Generate Document</button>
+
+</form>
+</div></body>
+</html>
